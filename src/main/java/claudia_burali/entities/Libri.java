@@ -1,6 +1,7 @@
 package claudia_burali.entities;
+import java.io.Serializable;
 
-public class Libri extends Catalogo  {
+public class Libri extends Catalogo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String autore;
@@ -12,6 +13,7 @@ public class Libri extends Catalogo  {
         this.genere = genere;
     }
 
+    // Getters and Setters
     public String getAutore() {
         return autore;
     }

@@ -18,8 +18,12 @@ public class Application {
         archivio.aggiungiElemento(libro2);
         archivio.aggiungiElemento(rivista1);
 
-        System.out.println("Ricerca per ISBN 978-3-16-148410-0:");
-        System.out.println(archivio.ricercaPerISBN("978-3-16-148410-0"));
+        try {
+            System.out.println("Ricerca per ISBN 978-3-16-148410-0:");
+            System.out.println(archivio.ricercaPerISBN("978-3-16-148410-0"));
+        } catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+        }
 
         System.out.println("Ricerca per anno di pubblicazione 1954:");
         List<Catalogo> risultatiAnno = archivio.ricercaPerAnnoPubblicazione(1954);
@@ -29,6 +33,16 @@ public class Application {
         List<Libri> risultatiAutore = archivio.ricercaPerAutore("J.K. Rowling");
         risultatiAutore.forEach(System.out::println);
 
+        archivio.salvaSuDisco("archivio.txt");
+
+        Archivio nuovoArchivio = new Archivio();
+        nuovoArchivio.caricaDaDisco("archivio.txt");
+
+        List<Catalogo> catalogoList = nuovoArchivio.getCatalogoList();
+        for (Catalogo elemento : catalogoList) {
+            System.out.println(elemento);
+        }
     }
 }
+
 

@@ -1,6 +1,7 @@
 package claudia_burali.entities;
+import java.io.Serializable;
 
-public abstract class Catalogo {
+public abstract class Catalogo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String codiceISBN;
@@ -57,4 +58,5 @@ public abstract class Catalogo {
                 '}';
     }
 }
+
 

@@ -1,7 +1,8 @@
 package claudia_burali.entities;
 import claudia_burali.enums.Periodicita;
+import java.io.Serializable;
 
-public class Riviste extends Catalogo {
+public class Riviste extends Catalogo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Periodicita periodicita;
@@ -11,6 +12,7 @@ public class Riviste extends Catalogo {
         this.periodicita = periodicita;
     }
 
+    // Getters and Setters
     public Periodicita getPeriodicita() {
         return periodicita;
     }
@@ -26,4 +28,5 @@ public class Riviste extends Catalogo {
                 "} " + super.toString();
     }
 }
+
 
