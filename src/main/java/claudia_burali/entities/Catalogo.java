@@ -1,6 +1,8 @@
 package claudia_burali.entities;
 
 public abstract class Catalogo {
+    private static final long serialVersionUID = 1L;
+
     private String codiceISBN;
     private String titolo;
     private int annoPubblicazione;
@@ -55,3 +57,4 @@ public abstract class Catalogo {
                 '}';
     }
 }
+

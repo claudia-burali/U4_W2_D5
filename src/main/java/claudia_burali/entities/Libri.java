@@ -1,6 +1,8 @@
 package claudia_burali.entities;
 
-public class Libri extends Catalogo {
+public class Libri extends Catalogo  {
+    private static final long serialVersionUID = 1L;
+
     private String autore;
     private String genere;
 
@@ -34,3 +36,4 @@ public class Libri extends Catalogo {
                 "} " + super.toString();
     }
 }
+

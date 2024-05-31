@@ -2,6 +2,8 @@ package claudia_burali.entities;
 import claudia_burali.enums.Periodicita;
 
 public class Riviste extends Catalogo {
+    private static final long serialVersionUID = 1L;
+
     private Periodicita periodicita;
 
     public Riviste(String codiceISBN, String titolo, int annoPubblicazione, int numeroPagine, Periodicita periodicita) {
@@ -24,3 +26,4 @@ public class Riviste extends Catalogo {
                 "} " + super.toString();
     }
 }
+
